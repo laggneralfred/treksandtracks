@@ -1,0 +1,714 @@
+/*
+Theme Name: Flexx Theme - Professional
+Theme URI: http://flexxtheme.com/
+Author: iThemes
+Author URI: http://ithemes.com/
+Version: 2.5.10
+Description: Flexx is an endlessly extensible, highly configurable blog theme from iThemes.com.
+Tags: blog, theme options, multiple layouts, multiple color schemes
+
+Copyright (c) 2009 iThemes Media, LLC.
+See license.txt for terms and conditions.
+
+See history.txt for version history.
+*/
+/*CSS Reset*/
+@import url(css/reset.css);
+/*Get the grid, baby!*/
+@import url(css/grid.css);
+
+body { /* This is where you set many of the universal defaults */
+	background: #e5e5e5 url(images/body-bg.gif) repeat-x; 
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/*********************************************
+		Universal Link Styles
+*********************************************/
+a {
+	color: #023565;
+	text-decoration: none;
+}
+a:hover { 
+	color: #023565; 
+	text-decoration: underline; 
+}
+
+/*********************************************
+		Universal Text Elements
+*********************************************/
+i, em {
+	font-style: italic;
+}
+b, strong {
+	font-weight: bold;
+}
+ol, ul {
+	margin: 5px 35px;
+}
+ol {
+	list-style-type: decimal;
+}
+ul {
+	list-style-type: square;
+}
+blockquote {
+	margin: 5px 20px 5px 20px; padding: 0px 20px;
+	font-style: italic;
+	background: #DDD;
+	border: 1px solid #555;
+	border-left: 3px solid #555;
+}
+img { border: 0px; background: none; }
+p {
+	padding: 10px 0px;
+	margin: 0px;
+}
+/*********************************************
+		Header Styles
+*********************************************/
+/* Use this for universal styles for all header elements
+Be sure to uncomment the styles before using */
+h1,h2,h3,h4,h5,h6 {
+	/*
+	font-family: ;
+	font-size: ;
+	color: px;
+	margin: px; padding: px;
+	*/
+}
+
+h1 { /* This style is generally used as title on single posts and pages */
+	font-size: 20px;
+	line-height: 24px;
+}
+h2 { /* This style used as a sub-header in post/page content */
+	font-size: 18px;
+}
+h3 { /* This style used as the post titles on homepage/archive */
+	clear: both;
+	font-size: 20px;
+	line-height: 24px;
+}
+h3 a {
+}
+h3 a:hover {
+}
+h4 { /* This style used as title for comments and as the identifying header on archive page  */
+	font-size: 18px;
+	padding: 0 0 0 15px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 14px;
+}
+
+/*********************************************
+		The Obligatory WP Styles
+*********************************************/
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.alignleft {
+   float: left;
+   margin: 0px 8px 8px 0px;
+}
+.alignright {
+   float: right;
+   margin: 0px 0px 8px 8px;
+}
+.wp-caption {
+   border: 1px solid #ddd;
+   text-align: center;
+   background-color: #f3f3f3;
+   padding-top: 4px;
+   margin: 10px;
+}
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+}
+.post img {border: 2px solid #cfcfcf;}
+
+/*********************************************
+		Container Div
+*********************************************/
+#container {
+	background: #FFF;
+	margin-top: 20px;
+	border: 1px solid #FFF;
+}
+
+/*********************************************
+		Header Styles
+*********************************************/
+#header {
+	clear: both;
+	background: #000;
+	position: relative;
+}
+#header #title a {
+	display: block;
+	overflow: hidden;
+}
+/*********************************************
+		Horizontal Navigaion Styles 
+				(with dropdowns)
+*********************************************/
+#above-header #pagemenu,
+#above-header #catmenu {
+	border-bottom: 1px solid #FFF;
+}
+#below-header #pagemenu,
+#below-header #catmenu {
+	border-top: 1px solid #FFF;
+}
+#pagemenu,
+#catmenu {
+	width: 100%;
+	margin: 0 auto 0; padding: 0;
+	background: #131313;
+	height: 32px;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+#pagemenu ul,
+#catmenu ul {
+	float: left;
+	list-style: none;
+	margin: 0; padding: 0;
+}
+#pagemenu li,
+#catmenu li {
+	float: left;
+	list-style: none;
+	margin: 0; padding: 0;
+}
+#pagemenu li a,
+#catmenu li a {
+	color: #FFF;
+	display: block;
+	font-weight: normal;
+    margin: 0; padding: 8px 10px;
+	text-decoration: none;
+	border-right: 1px solid #FFF;
+	background: #131313 url(images/menu-item-bg.gif) top center no-repeat;
+}
+#pagemenu li a:hover,
+#catmenu li a:hover {
+	background: #0b2300 url(images/menu-active-bg.gif) top center no-repeat;
+}
+/* Home link */
+#pagemenu ul li.home a {
+	width: 40px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: #131313 url(images/menu-home-bg.gif) top center no-repeat;
+}
+#pagemenu ul li.home a:hover {
+	width: 40px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: #0b2300 url(images/menu-home-active-bg.gif) top center no-repeat;
+}
+
+/* second level stuff */
+#pagemenu li ul,
+#catmenu li ul {
+	z-index: 9999;
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 190px;
+	margin: 0; padding: 0;
+	border-top: 1px solid #FFF;
+}
+#pagemenu li li,
+#catmenu li li {
+	padding: 0;
+}
+#pagemenu li li a,
+#catmenu li li a {
+	width: 168px;
+	float: none;
+	margin: 0px;
+	padding: 2px 10px;
+	border: 1px solid #FFF;
+	border-top: none;
+	background: #131313 url(images/menu-item-bg.gif) top center no-repeat;
+}
+#pagemenu li li a:hover,
+#catmenu li li a:hover {
+	background: #0b2300 url(images/menu-active-bg.gif) top center no-repeat;
+	color: #FFFFFF;
+	padding: 2px 10px;
+}
+#pagemenu li ul,
+#catmenu li ul {
+	z-index: 9999;
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 190px;
+	margin: 0; padding: 0;
+}
+#pagemenu li ul ul,
+#catmenu li ul ul {
+	margin: -22px 0 0 189px;
+}
+#pagemenu li:hover ul ul,
+#pagemenu li:hover ul ul ul,
+#pagemenu li.sfhover ul ul,
+#pagemenu li.sfhover ul ul ul,
+#catmenu li:hover ul ul,
+#catmenu li:hover ul ul ul,
+#catmenu li.sfhover ul ul,
+#catmenu li.sfhover ul ul ul {
+	left: -999em;
+}
+#pagemenu li:hover ul,
+#pagemenu li li:hover ul,
+#pagemenu li li li:hover ul,
+#pagemenu li.sfhover ul,
+#pagemenu li li.sfhover ul,
+#pagemenu li li li.sfhover ul,
+#catmenu li:hover ul,
+#catmenu li li:hover ul,
+#catmenu li li li:hover ul,
+#catmenu li.sfhover ul,
+#catmenu li li.sfhover ul,
+#catmenu li li li.sfhover ul {
+	left: auto;
+}
+#pagemenu li:hover,
+#pagemenu li.sfhover,
+#catmenu li:hover,
+#catmenu li.sfhover { 
+	position: static;
+}
+
+/*********************************************
+		Feature-Top Div
+		Feature-Bottom Div
+*********************************************/
+.w260,.w260-,.w390,.w390- {display: inline; float: left; margin: 0px 10px; text-align: left; overflow: hidden;}
+.w260 {width: 240px;} .w260- {width: 260px; margin: 0px;}
+.w390 {width: 370px;} .w390- {width: 390px; margin: 0px;}
+#feature-top,
+#feature-bottom {
+	width: 100%;
+	background: #134600 url(images/feature-top-bg.gif) bottom center no-repeat;
+	color: #FFF;
+	float: left;
+	margin: 0px; padding: 0px 0px 10px 0px;
+	overflow: hidden;
+}
+#feature-top {
+	border-top: 1px solid #FFF;
+}
+#feature-top a {
+	color: #FFF;
+	text-decoration: none;
+}
+#feature-top a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+#feature-bottom {
+	background: #1c1c1c;
+}
+#feature-bottom a {
+	color: #FFF;
+	text-decoration: none;
+}
+#feature-bottom a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+#feature-top .widget,
+#feature-bottom .widget {
+	padding: 0px 0px 10px 0px;
+}
+#feature-top h4,
+#feature-bottom h4 {
+	background: none;
+	margin: 0px 10px; padding: 5px 0px;
+	color: #FFF;
+	font-size: 11px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #3e6a2b;
+}
+#feature-top h4 a,
+#feature-bottom h4 a {
+	color: #FFF;
+	text-decoration: none;
+}
+#feature-top h4 a:hover,
+#feature-bottom h4 a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+#feature-bottom h4 {
+	border: none;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+#feature-top p,
+#feature-top ul,
+#feature-top ol,
+#feature-top img  {
+	padding: 10px;
+}
+#feature-bottom p,
+#feature-bottom ul,
+#feature-bottom ol,
+#feature-bottom img  {
+	padding: 10px;
+}
+#feature-top .textwidget,
+#feature-bottom .textwidget {
+	padding: 10px;
+}
+#feature-top ul,
+#feature-top ol,
+#feature-bottom ul,
+#feature-bottom ol {
+	padding: 10px 0px; margin: 0px 15px 5px 25px;
+	list-style-type: square;
+}
+#feature-top li ul,
+#feature-top li ol,
+#feature-bottom li ul,
+#feature-bottom li ol {
+	padding: 0px;
+}
+#feature-top a.rsswidget img,
+#feature-bottom a.rsswidget img {
+	display: none;
+}
+	
+/*********************************************
+		Content Div
+*********************************************/
+#content {
+	background: #FFF url(images/grad.gif) repeat-x;
+}
+
+.post {
+	padding: 5px 10px 10px 10px;
+}
+.post .title {
+	width: 580px;
+}
+.page .date {
+	display: none;
+}
+.post .date {
+	display: block;
+	width: 69px; height: 75px;
+	background: url(images/date.png) no-repeat;
+	text-align: center;
+	color: #FFF;
+	float: left;
+}
+.post .date .month {
+	font-size: 16px;
+	line-height: 32px;
+	text-transform: uppercase;
+}
+.post .date .day {
+	font-size: 35px;
+	line-height: 35px;
+}
+.post .post-title {
+	float: left;
+	width: 500px;
+	padding: 12px 0px 0px 10px;
+}
+.post .post-title a {
+	text-decoration: none;
+}
+
+/*********************************************
+		Post Meta Styles, if needed
+*********************************************/
+.meta-top {
+	clear: both; /* we need this so floats in the post are cleared */
+}
+.meta-bottom {
+	clear: both; /* we need this so floats in the post are cleared */
+	border-top: 1px solid #d7d7d7;
+	margin: 10px 0px 0px 0px; padding: 10px 0px 0px 0px;
+}
+.meta-bottom .alignleft {
+	width: 70%;
+}
+.meta-bottom .categories {
+	background: url(images/folder.png) 0px 0px no-repeat;
+	padding: 0px 0px 0px 18px;
+}
+.meta-bottom .comments {
+	background: url(images/comments.png) 0px 2px no-repeat;
+	padding: 0px 0px 0px 18px;
+}
+.photometa {
+	margin: 0px 5px 0px 5px; padding: 0px 0px;
+	width: 100%;
+}
+.EXIF {
+	margin: -22px 0px 0px 10px; padding: 0px 0px;
+	float: left;
+	width: 33%;
+}
+.photometa h4 {
+	border-bottom: 1px solid #666;
+	text-align: center;
+	margin: 0px; padding: 0px;
+}
+.photometa ul {
+	list-style-type: none;
+}
+
+/*********************************************
+		Previous/Next Page Navigation
+*********************************************/
+.paging {
+	clear: both; /* To clear any floats */
+	margin: 0px; padding: 10px;
+}
+
+/*********************************************
+		Sidebar
+*********************************************/
+#sidebar { /* Wide Sidebar */
+	background: #FFF url(images/grad.gif) repeat-x;
+}
+.sidebar {
+	background: #FFF url(images/grad.gif) repeat-x;
+}
+#sidebar .sidebar {
+	background: none;
+}
+.sidebar a {
+	text-decoration: none;
+}
+.sidebar a:hover {
+	text-decoration: underline;
+}
+.sidebar h4 {
+	clear: both;
+	background: #013565 url(images/sidebar-h4-bg.gif) top left no-repeat;
+	color: #FFF;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0 0 10px 0; padding: 8px 0px 8px 15px;
+	line-height: 13px;
+}
+.sidebar h4 img {
+	padding: 0px;
+}
+.sidebar h4 a {
+	color: #FFF;
+	text-decoration: none;
+	margin: 0px; padding: 0px;
+}
+.sidebar .widget {
+	clear: both;
+	padding: 5px 10px;
+}
+.sidebar p,
+.sidebar ul,
+.sidebar ol,
+.sidebar img {
+	padding: 5px 0px;
+}
+.sidebar p, 
+.sidebar .textwidget {
+	padding: 5px 0px;
+}
+.sidebar img {
+	text-align: center;
+}
+.sidebar ul {
+	list-style-type: none;
+	margin: 0px; padding: 0px;
+}
+.sidebar ul li {
+	margin: 0px; padding: 0px 0px 0px 8px;
+	line-height: 18px;
+	background: url(images/arrow.gif) 0px 4px no-repeat;
+}
+.sidebar ul li a {
+	text-decoration: none;
+}
+.sidebar ul li a:hover {
+	
+}
+.sidebar ul li ul {
+	margin: 0px; padding: 0px;
+}
+.sidebar ul li ul li {
+	margin: 0px; padding: 0px 0px 0px 8px;
+}
+.sidebar a.rsswidget img {
+	display: none;
+}
+
+/*********************************************
+		Comment Styles
+*********************************************/
+#comments {
+	margin: 0; padding: 20px 10px;
+}
+#comments .title {
+	font-size: 25px;
+	margin: 0px; padding: 15px 0px;
+}
+#comments ol.commentlist {
+	margin: 0px; padding: 0px;
+	background: #333;
+}
+#comments ul.children {
+	margin: 0px; padding: 10px 0px 0px 20px;
+}
+#comments .vcard {
+	
+}
+#comments .vcard .avatar {
+	display: block;
+	float: left;
+	margin: 0px; padding: 0px 10px 0px 0px;
+}
+#comments .comment-meta {
+	padding: 0px 0px 20px 0px;
+}
+#comments li.even,
+#comments li.odd {
+	clear: both;
+	list-style-type: none;
+	margin: 5px 0px 5px 0px; padding: 10px;
+	background: #FFFFFF;
+	overflow: hidden;
+	border: 1px solid #999;
+}
+#comments ul.children li {
+}
+#comments li.even {
+	margin: 5px 0px 5px 0px;
+	padding: 10px;
+	overflow: hidden;
+}
+#comments li.odd {
+	margin: 5px 0px 5px 0px;
+	padding: 10px;
+	overflow: hidden;
+}
+#comments blockquote {
+	margin: 10px 0px; padding: 10px;
+}
+#comments .alert {
+	background: #fffbd6;
+	border: 1px solid #ebe067;
+	margin: 5px 0px; padding: 5px;
+}
+#comments p {
+	margin: 0px 0px 10px; padding: 0px;
+}
+
+#respond {
+	overflow: hidden;
+	padding: 10px;
+}
+#respond #commentform {
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#respond #commentform #author,
+#respond #commentform #email,
+#respond #commentform #url {
+	width: 50%;
+	margin: 0px 0px 5px 0px; padding: 5px;
+}
+#respond #commentform #comment {
+	width: 90%;
+	margin: 10px 0px 15px 0px; padding: 5px;
+}
+
+/*********************************************
+		Footer Styles
+*********************************************/
+#footer {
+	text-align: left;
+	color: #222;
+}
+#footer .alignleft,
+#footer .alignright {
+	padding: 10px;
+}
+#footer .alignright {
+	text-align: right;
+}
+#footer a {
+	color: #222;
+	text-decoration: none;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
+
+/*********************************************
+		Contact Form Styles
+*********************************************/
+.ithemes-contact-page {
+	margin: 0 auto;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.ithemes-contact-page td {
+	padding: 5px;
+	text-align: left;
+}
+.ithemes-contact-page td.label {
+	text-align: right;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+.ithemes-contact-page input,
+.ithemes-contact-page textarea,
+.ithemes-contact-page select {
+	font-family: Arial, Helvetica, Sans-Serif;
+	padding: 3px;
+}
+.ithemes-contact-page input:hover,
+.ithemes-contact-page textarea:hover,
+.ithemes-contact-page  select:hover	{
+}
+
+.ithemes-contact-page  input:focus,
+.ithemes-contact-page  textarea:focus,
+.ithemes-contact-page  select:focus	{
+}
+
+.ithemes-contact-page textarea,
+.ithemes-contact-page input {
+}

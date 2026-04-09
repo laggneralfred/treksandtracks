@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b9c71b52-b002-4ade-b5e9-fa506e173d32" name="treksandtracks.com" url="http://165.227.4.200">
+        <fileTransfer host="165.227.4.200" port="22" privateKey="C:\Users\alfre\.ssh\id_rsa_stella" rootFolder="/home/forge" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

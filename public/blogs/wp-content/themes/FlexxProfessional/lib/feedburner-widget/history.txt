@@ -1,0 +1,7 @@
+1.0.0 - 2009-02-06
+	Initial version
+1.0.1 - 2009-03-03
+	Fixed subscriber form bug
+1.0.2 - 2009-08-07
+	Added patch for PHP 4.4/5.0.5 bug:
+		http://the-stickman.com/web-development/php/php-505-fatal-error-only-variables-can-be-passed-by-reference/

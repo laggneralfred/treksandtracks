@@ -1,0 +1,242 @@
+/*
+$Id: wp-admin.css 177 2007-09-18 05:55:31Z asirevver $
+$LastChangedDate: 2007-09-17 22:55:31 -0700 (Mon, 17 Sep 2007) $
+$LastChangedRevision: 177 $
+$LastChangedBy: asirevver $
+*/
+
+#revver-logo {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+}
+
+#revver-gnav {
+    width: 100%;
+    float: left;
+    clear: both;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+#revver-gnav ul#revver-gnav-tabs {
+    margin: 0px 0px 0px 8px;
+    padding: 0;
+}
+
+#revver-gnav ul#revver-gnav-tabs li  {
+    display: inline;
+    list-style: none;
+}
+
+#revver-gnav ul#revver-gnav-tabs a, #revver-gnav ul#revver-gnav-tabs a.current {
+    display: block;
+    float: left;
+    padding: 4px 25px;
+    margin: 1px 0px 0 0;
+    text-align: center;
+    font-size: 11px;
+    font-family: Tahoma, Arial;
+    line-height: 17px;
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+}
+
+#revver-gnav ul#revver-gnav-tabs a {
+    background: #eee;
+    border: 1px solid #000;
+    border-bottom: none;
+    color: #000;
+}
+
+#revver-gnav ul#revver-gnav-tabs a:hover {
+    margin-top: 0;
+    background: #ddd;
+    padding-bottom: 5px;
+}
+
+#revver-gnav ul#revver-gnav-tabs a.current, #revver-gnav ul#revver-gnav-tabs a.current:hover {
+    border: 1px solid #000;
+    border-bottom: none;
+    background: #7CA740;
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+#revver-search-form {
+    padding: 10px 10px 10px 5px;
+    border-bottom: 1px solid black;
+    background-color: #f1f1f1;
+    margin: 0px;
+    clear: both;
+}
+
+#revver-search-form form {
+    margin: 0px;
+}
+
+#revver-search-form input, #revver-search-form select {
+    padding: 2px;
+}
+
+#revver-search-form select {
+    padding: 1px;
+}
+
+#revver-results-header {
+    padding: 5px 5px 5px 5px;
+    border-bottom: 1px solid black;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Tahoma, Arial;
+    line-height: 17px;
+}
+
+#revver-results-header p {
+    margin: 0px;
+}
+
+#revver-results-content {
+    padding: 20px 10px 5px 10px;
+}
+
+.revver-results-video {
+    margin: 0px 25px 10px 0px;
+    width: 120px;
+    float: left;
+}
+
+.revver-results-video p, #revver-results-content p {
+    font-size: 11px;
+    font-weight: normal;
+    font-family: Tahoma, Arial;
+    line-height: 15px;
+    margin-top: 0px;
+}
+
+.revver-results-video p.bigger, #revver-results-content p.bigger {
+    font-size: 15px;
+    font-weight: normal;
+    font-family: Tahoma, Arial;
+    line-height: 19px;
+    margin-top: 0px;
+}
+
+.revver-results-video img {
+    border: 1px solid black;
+}
+
+.revver-results-pagingmenu {
+    font-size: 12pt;
+    font-weight: normal;
+    font-family: Tahoma, Arial;
+    line-height: 18px;
+    margin-top: 0px;
+    text-align: center; 
+}
+
+.revver-results-pagingmenu a {
+    border: 1px solid #999;
+    padding: 4px;
+    margin: 0 2px 0 2px;
+    text-decoration: none;
+    color: #7ca740;
+}
+
+.revver-results-pagingmenu a:hover {
+    border: 1px solid #7ca740;
+}
+
+.revver-results-pagingmenu span.current-page {
+    border: 1px solid #999;
+    background-color: #7ca740;
+    padding: 4px;
+    margin: 0 2px 0 2px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#revver-video-metaform-container {
+    margin-left: 20px;
+}
+
+#revver-video-metaform {
+
+}
+
+.revver-fieldset {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.revver-legend {
+}
+
+.revver-label {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Tahoma, Arial;
+    line-height: 13px;
+}
+
+.revver-label span.required {
+    font-weight: normal;
+    color: red;
+}
+
+.revver-msg-headline {
+    color: #8CC542;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Tahoma, Arial;
+    line-height: 23px;
+}
+
+.revver-msg-subheadline {
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Tahoma, Arial;
+    line-height: 21px;
+}
+
+#revver-uploader-header {
+    background: black;
+    padding: 10px;
+}
+
+#revver-uploader-header h1 {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-weight: bold;
+    margin: 0px;
+    color: white;
+    font-size: 20px;
+}
+
+#revver-uploader-header h2 {
+    font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-weight: bold;
+    margin: 0px;
+    color: white;
+    font-size: 30px;
+}
+
+#revver-uploader-logo {
+    position: absolute;
+    top: 40px;
+    right: 2px;
+}
+
+.revverVideoId {
+    color: #00A9CC;
+    font-weight: bold;
+}
+
+/* the link on the wp register page */
+a.revver-tos, a.revver-tos:link {
+    color: white;
+}

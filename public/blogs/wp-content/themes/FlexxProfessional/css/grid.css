@@ -1,0 +1,43 @@
+/*Containers*/
+/*16 Column*/
+.c960,.c900,.c840,.c780,.c720,.c660,.c600,.c540,.c480 {display: block;}
+.c960 {width: 960px;} .c900 {width: 900px;} .c840 {width: 840px;}
+.c780 {width: 780px;} .c720 {width: 720px;} .c660 {width: 660px;}
+.c600 {width: 600px;} .c540 {width: 540px;} .c480 {width: 480px;}
+/*12 Column*/
+.c960,.c880,.c800,.c720,.c640,.c560,.c480 {display: block;}
+.c960 {width: 960px;} .c880 {width: 880px;} .c800 {width: 800px;}.c720 {width: 720px;}
+.c640 {width: 640px;} .c560 {width: 560px;} .c480 {width: 480px;}
+/*Columns (12 & 16)*/
+.w960,.w960-,.w900,.w900-,.w840,.w840-,.w780,.w780-,.w720,.w720-,.w660,.w660-,.w600,.w600-,.w540,.w540-,.w480,.w480-,.w420,.w420-,.w360,.w360-,.w300,.w300-,.w240,.w240-,.w180,.w180-,.w120,.w120-,.w60,.w60-,.w880,.w880-,.w800,.w800-,.w640,.w640-,.w560,.w560-,.w480,.w480-,.w400,.w400-,.w320,.w320-,.w160,.w160-,.w80,.w80- {display: inline; float: left; margin: 0px 10px; text-align: left; overflow: hidden;}
+/*16 Column*/
+.w960 {width: 940px;} .w960- {width: 960px; margin: 0px;}
+.w900 {width: 880px;} .w900- {width: 900px; margin: 0px;}
+.w840 {width: 820px;} .w840- {width: 840px; margin: 0px;}
+.w780 {width: 760px;} .w780- {width: 780px; margin: 0px;}
+.w720 {width: 700px;} .w720- {width: 720px; margin: 0px;}
+.w660 {width: 640px;} .w660- {width: 660px; margin: 0px;}
+.w600 {width: 580px;} .w600- {width: 600px; margin: 0px;}
+.w540 {width: 520px;} .w540- {width: 540px; margin: 0px;}
+.w480 {width: 460px;} .w480- {width: 480px; margin: 0px;}
+.w420 {width: 400px;} .w420- {width: 420px; margin: 0px;}
+.w360 {width: 340px;} .w360- {width: 360px; margin: 0px;}
+.w300 {width: 280px;} .w300- {width: 300px; margin: 0px;}
+.w240 {width: 220px;} .w240- {width: 240px; margin: 0px;}
+.w180 {width: 160px;} .w180- {width: 180px; margin: 0px;}
+.w120 {width: 100px;} .w120- {width: 120px; margin: 0px;}
+.w60 {width: 40px;} .w60- {width: 60px; margin: 0px;}
+/*12 Columns*/
+.w880 {width: 860px;} .w880- {width: 880px; margin: 0px;}
+.w800 {width: 780px;} .w800- {width: 800px; margin: 0px;}
+.w640 {width: 620px;} .w640- {width: 640px; margin: 0px;}
+.w560 {width: 540px;} .w560- {width: 560px; margin: 0px;}
+.w480 {width: 460px;} .w480- {width: 480px; margin: 0px;}
+.w400 {width: 380px;} .w400- {width: 400px; margin: 0px;}
+.w320 {width: 300px;} .w320- {width: 320px; margin: 0px;}
+.w160 {width: 140px;} .w160- {width: 160px; margin: 0px;}
+.w80 {width: 60px;} .w80- {width: 80px; margin: 0px;}
+/*Alignment and Float*/
+.center {margin: 0 auto;} .left {float: left;} .right {float: right;}
+.clearfloat {clear: both;}
+.wrap:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}

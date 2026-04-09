@@ -1,0 +1,36 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8081:80"
+    environment:
+      APP_URL: http://localhost:8081
+      WP_DB_NAME: treksandtracks_wp
+      WP_DB_USER: root
+      WP_DB_PASSWORD: treksroot
+      WP_DB_HOST: mysql
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    image: mysql:5.7
+    command: --sql-mode=NO_ENGINE_SUBSTITUTION --character-set-server=utf8 --collation-server=utf8_general_ci
+    environment:
+      MYSQL_DATABASE: treksandtracks_wp
+      MYSQL_ROOT_PASSWORD: treksroot
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./treksand_IC_20100824_144554.sql:/docker-entrypoint-initdb.d/01-treksand_IC_20100824_144554.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-ptreksroot"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+volumes:
+  mysql_data:

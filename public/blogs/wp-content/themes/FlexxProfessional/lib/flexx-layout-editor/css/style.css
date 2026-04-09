@@ -1,0 +1,21 @@
+.flexx-option {
+	float:left;
+	padding:10px;
+}
+
+.flexx-option-selected {
+	margin: 2px;
+	border: 3px solid #333;
+}
+
+.flexx-option-not-selected {
+	margin: 5px;
+}
+
+.flexx_preview {
+	margin-top: -1px;
+}
+
+#below_header_flexx_preview {
+	margin-top: -50px !important;
+}
